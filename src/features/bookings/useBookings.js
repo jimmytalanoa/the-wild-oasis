@@ -29,7 +29,7 @@ export function useBookings() {
     error,
   } = useQuery({
     queryKey: ["bookings", filter, sortBy, page],
-    queryFn: () => getBookings({ filter, page }),
+    queryFn: () => getBookings({ filter, sortBy, page }),
   });
 
   // PRE-FETCHING
